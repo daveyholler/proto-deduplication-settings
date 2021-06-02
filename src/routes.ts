@@ -1,11 +1,13 @@
 import Dashboard from "./dashboard/dashboard";
 import DashboardIndex from "./dashboard/index";
 import Discover from "./discover/discover";
+import AppSearch from "./enterprise_search/appSearch";
 import Home from "./home/home";
 
 enum SOLUTIONS {
   KIBANA = "kibana",
   OBSERVABILITY = "observability",
+  ENTERPRISE_SEARCH = "enterpriseSearch",
 }
 
 export const orderedCategories = [
@@ -18,6 +20,11 @@ export const orderedCategories = [
     id: SOLUTIONS.OBSERVABILITY,
     icon: "logoObservability",
     label: "Observability",
+  },
+  {
+    id: SOLUTIONS.ENTERPRISE_SEARCH,
+    icon: "logoEnterpriseSearch",
+    label: "Enterprise Search",
   },
 ];
 
@@ -39,6 +46,12 @@ export const routes = [
         component: Dashboard,
       },
     ],
+  },
+  {
+    category: SOLUTIONS.ENTERPRISE_SEARCH,
+    label: "App Search",
+    path: "/app-search",
+    component: AppSearch,
   },
   {
     path: "/",
