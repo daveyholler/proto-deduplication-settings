@@ -1,4 +1,8 @@
-export const SCHEMA_FIELDS = [
+export interface ISchemaField {
+  fieldName: String;
+}
+
+export const SCHEMA_FIELDS: ISchemaField[] = [
   { fieldName: "title" },
   { fieldName: "url" },
   { fieldName: "description" },
