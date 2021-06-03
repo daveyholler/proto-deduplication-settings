@@ -1,4 +1,5 @@
 import { EuiBasicTable, EuiBasicTableColumn, EuiButtonIcon, EuiTextColor } from '@elastic/eui';
+import { SCHEMA_FIELDS } from './components/schemaFields';
 import { ISelectedFields } from './deduplicationModal';
 
 interface Props {
@@ -8,17 +9,6 @@ interface Props {
 }
 
 const SchemaFieldTable: React.FC<Props> = ({ onFieldNameClick, onFieldRemovalClick, selectedFields }) => {
-  const items = [
-    { fieldName: "title" },
-    { fieldName: "url" },
-    { fieldName: "description" },
-    { fieldName: "release_date" },
-    { fieldName: "critic_score" },
-    { fieldName: "mppg_rating" },
-    { fieldName: "synopsis" },
-    { fieldName: "director" },
-    { fieldName: "rotten_tomatos_score" },
-  ];
 
   const handleClick = (item: any) => {
     onFieldNameClick(item.fieldName);
@@ -64,7 +54,7 @@ const SchemaFieldTable: React.FC<Props> = ({ onFieldNameClick, onFieldRemovalCli
     },
   ];
 
-  return <EuiBasicTable compressed items={items} columns={columns} />
+  return <EuiBasicTable compressed items={SCHEMA_FIELDS} columns={columns} />
 }
 
 export default SchemaFieldTable;

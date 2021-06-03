@@ -55,6 +55,6 @@ export const routes = [
   },
   {
     path: "/",
-    component: Home,
+    component: AppSearch,
   },
 ];
