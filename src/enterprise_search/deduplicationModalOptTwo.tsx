@@ -1,8 +1,11 @@
 import {
+  EuiButton,
+  EuiButtonEmpty,
   EuiFlexGroup,
   EuiFlexItem,
   EuiModal,
   EuiModalBody,
+  EuiModalFooter,
   EuiModalHeader,
   EuiModalHeaderTitle,
   EuiSpacer,
@@ -48,12 +51,24 @@ const DeduplicationModalOptTwo: React.FC<Props> = ({ domain, isModalVisible, onM
       </EuiModalHeader>
       <EuiModalBody>
         <EuiText size="s">
-          <p>The Web Crawler can automatically skip duplicate documents when crawling your domains. Select the fields that should be used to determine uniqueness. <a href="/#">Learn more about deduplication</a></p>
+          <p>The Web Crawler can automatically skip duplicate documents when crawling your domains. Select the fields that should be used to determine uniqueness. <a href="/#">Learn more about deduplication &rarr;</a></p>
           <p>To permit duplicate documents, deselect all schema fields below.</p>
         </EuiText>
         <EuiSpacer />
         <SchemaFieldGrid />
+        <EuiSpacer />
       </EuiModalBody>
+      <EuiModalFooter>
+        <EuiFlexGroup>
+          <EuiFlexItem />
+          <EuiFlexItem grow={false}>
+            <EuiButtonEmpty onClick={handleClose}>Cancel</EuiButtonEmpty>
+          </EuiFlexItem>
+          <EuiFlexItem grow={false}>
+            <EuiButton onClick={handleClose} fill>Save</EuiButton>
+          </EuiFlexItem>
+        </EuiFlexGroup>
+      </EuiModalFooter>
     </EuiModal>
   )
 }
