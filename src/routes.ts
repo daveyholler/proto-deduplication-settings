@@ -2,7 +2,6 @@ import Dashboard from "./dashboard/dashboard";
 import DashboardIndex from "./dashboard/index";
 import Discover from "./discover/discover";
 import AppSearch from "./enterprise_search/appSearch";
-import Home from "./home/home";
 
 enum SOLUTIONS {
   KIBANA = "kibana",
